@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>管理系统首页</title>
+    <meta name="keywords" content="管理系统首页">
+    <meta name="description" content="管理系统首页">
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/iconfont.css" rel="stylesheet">
+    <link href="/css/viewframe.css" rel="stylesheet">
+
+</head>
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow: hidden">
+
+<div id="wrapper">
+    <!--顶侧导航开始-->
+    <div class="topbar " data-spm="main_topbar">
+        <div class="main-logo pull-left logo-box">
+            <div class="main-logo-wrapper pull-left">
+                <a href="#" target="_blank" class="main-icon pull-left">
+                    <span class="topbar-sidebar-logo-new icon-logo-new"></span></a>
+                <a href="#" target="_self" class="console-link pull-left"><span>管理控制台</span></a>
+            </div>
+        </div>
+        <div class="pull-right topbar-info clearfix">
+            <div class="pull-left dropdown topbar-notice topbar-info-dropdown topbar-info-item message-box">
+                <a href="#" class="topbar-btn topbar-btn-notice topbar-hover-dark">
+                    <span  class="iconfont topbar-btn-notice-icon topbar-sidebar-bell">
+                        <i class="iconfont icon-header-message"></i>
+                    </span>
+                    <span class="topbar-btn-notice-num ">1</span></a>
+                <div class="topbar-notice-panel topbar-info-dropdown-memu">
+                    <div class="topbar-notice-arrow"></div>
+                    <div class="topbar-notice-head"><span>站内消息通知</span>
+                        <a href="#" class="pull-right" style="font-size: 13px; color: rgb(0, 193, 222);">消息接收管理</a>
+                    </div>
+                    <div>
+                        <div class="topbar-notice-body">
+                            <ul>
+                                <li class="">
+                                    <a href="#" target="_blank" class="clearfix">
+                                        <span class="inline-block">
+                                            <span class="topbar-notice-link">优惠</span>
+                                            <span class="topbar-notice-time">2018-03-13 18:11</span>
+                                        </span>
+                                        <span class="topbar-notice-class">
+                                            <span class="topbar-notice-class-name">优惠活动</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="topbar-notice-foot">
+                            <a class="topbar-notice-more" target="_blank" href="#">查看更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pull-left topbar-info-item topbar-info-dropdown expense-box">
+                <a href="#" target="_blank" class="topbar-btn topbar-info-dropdown-toggle"><span>费用</span></a>
+                <ul class="topbar-info-dropdown-memu topbar-info-dropdown-memu-list">
+                    <li class="topbar-info-btn">
+                        <a href="#" target="_blank"><span>充值</span></a></li>
+                    <li class="topbar-info-btn">
+                        <a href="#" target="_blank"><span>订单</span></a></li>
+                    <li class="topbar-info-btn">
+                        <a href="#" target="_blank"><span>发票</span></a></li>
+                    <li class="topbar-info-btn">
+                        <a href="#" target="_blank"><span>消费记录</span></a></li>
+                    <li class="topbar-info-btn">
+                        <a href="#" target="_blank"><span>续费管理</span></a></li>
+                    <li class="topbar-info-btn">
+                        <span class="topbar-info-btn-gap"></span>
+                        <a href="#" target="_blank"><span>进入费用中心</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pull-left topbar-info-item topbar-info-dropdown enterprise-box">
+                <a href="" target="_blank" class="topbar-btn topbar-info-dropdown-toggle">
+                    <span>企业</span></a>
+                <ul class="topbar-info-dropdown-memu topbar-info-dropdown-memu-list">
+                    <li class="topbar-info-btn">
+                        <a href="#" target="_blank"><span>人员管理</span></a>
+                    </li>
+                    <li class="topbar-info-btn">
+                        <a href="#" target="_blank"><span>权限管理</span></a></li>
+                </ul>
+            </div>
+            <div class="pull-left topbar-info-item topbar-info-dropdown support-box "><a
+                    href="#" target="_blank"
+                    class="topbar-btn topbar-info-dropdown-toggle"><span>支持与服务</span></a>
+                <ul class="topbar-info-dropdown-memu topbar-info-dropdown-memu-list">
+                    <li class="topbar-info-btn">
+                        <a href="#" target="_blank"><span>帮助与文档</span></a>
+                    </li>
+                    <li class="topbar-info-btn">
+                        <a href="#" target="_blank"><span>专家服务</span></a>
+                    </li>
+                    <li class="topbar-info-btn">
+                        <a href="#" target="_blank"><span>提交建议</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pull-left topbar-user user-box ">
+                <div class="topbar-info-dropdown topbar-info-item">
+                    <a href="#" target="_blank" class="topbar-info-dropdown-toggle topbar-btn">
+                        <img class="topbar-user-avatar" src="img/profile_small3.png">
+                    </a>
+                    <div class="common-topbar-user-info-dropdown" style="top: 40px;">
+                        <div class="top">
+                            <div class="top-line">
+                                <a class="user-uid" href="#" th:text="${user.userName}">yuzhen_****@126.com</a>
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <div class="middle-line">
+                                <a href="#">
+                                    <img class="info-prefix-icon" src="//img.alicdn.com/tfs/TB1ylkGRpXXXXX9aFXXXXXXXXXX-32-32.png">
+                                    <span class="left-text">余额</span>
+                                    <span id="topbar-prepay-money" class="right-text">￥0.00</span>
+                                </a>
+                                <a class="charge-btn" href="#">充值</a>
+                            </div>
+                            <a class="middle-line" href="https://club.aliyun.com/">
+                                <img class="info-prefix-icon" src="//img.alicdn.com/tfs/TB17jdvRFXXXXaMXXXXXXXXXXXX-32-32.png">
+                                <span class="left-text">积分</span>
+                                <span id="topbar-point-number" class="right-text">0</span>
+                            </a>
+                            <div class="break-line"></div>
+                        </div>
+                        <div class="bottom-line">
+                            <div class="logout-btn"><a href="/logout">退出</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--左侧导航开始-->
+    <nav id="main-sidebar" class="navbar-default navbar-static-side" role="navigation">
+        <div class="nav-close">
+            <i class="fa fa-times-circle"></i>
+        </div>
+        <div class="sidebar-fold icon-unfold">
+            <a id="collaps" class="toggle-nav-collapse collapse-nav" href="javascript:void(0)" tip="展开/收起">
+                <i class="iconfont icon-collapse1"></i>
+            </a>
+        </div>
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="active">
+                    <a href="index.html"><i class="fa fa-home"></i> <span class="nav-label">主页</span> <span
+                            class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li class="active"><a class="menuItem" th:href="@{/system/main}">欢迎</a></li>
+                    </ul>
+                </li>
+                <li th:each="menu : ${menus}">
+                    <a href="#">
+                        <i class="fa fa fa-bar-chart-o" th:class="${menu.icon}"></i>
+                        <span class="nav-label" th:text="${menu.menuName}">一级菜单</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level collapse">
+                        <li th:each="cmenu : ${menu.children}">
+                            <a class="menuItem" th:text="${cmenu.menuName}" th:href="${cmenu.url}">二级菜单</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- <div class="bottom-nav">
+             <a id="collaps" class="toggle-nav-collapse collapse-nav" href="javascript:void(0)" tip="展开/收起"><i class="iconfont icon-collapse1"></i></a>
+         </div>-->
+    </nav>
+    <!--左侧导航结束-->
+
+    <!--右侧部分开始-->
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row content-tabs">
+            <button class="roll-nav roll-left tabLeft">
+                <i class="fa fa-backward"></i>
+            </button>
+            <nav class="page-tabs menuTabs">
+                <div class="page-tabs-content">
+                    <a href="javascript:;" class="active menuTab">欢迎</a>
+                </div>
+            </nav>
+            <button class="roll-nav roll-right tabRight">
+                <i class="fa fa-forward"></i>
+            </button>
+            <div class="btn-group roll-nav roll-right">
+                <button class="dropdown J_tabClose" data-toggle="dropdown">
+                    页签操作<span class="caret"></span>
+                </button>
+                <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                    <li class="tabReload"><a>刷新</a></li>
+                    <li class="tabCloseAll"><a>全部关闭</a></li>
+                    <li class="tabCloseOther"><a>关闭其他</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mainContent" id="content-main">
+            <iframe class="tuny_iframe" name="iframe0" width="100%" height="100%"
+                    th:src="@{/system/main}" frameborder="0" seamless></iframe>
+        </div>
+        <!-- <div class="footer">
+             <div class="pull-right">© 2018-2020 xx Copyright</div>
+         </div>-->
+    </div>
+    <!--右侧部分结束-->
+</div>
+<!-- 全局js -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/tuny/js/index.js?v=1.0.1"></script>
+</body>
+</html>

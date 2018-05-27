@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>管理系统 - 登录</title>
+    <meta name="keywords" content="管理系统">
+    <meta name="description" content="tuny">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/login.css" rel="stylesheet">
+    <link href="/css/register.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+    <link rel="shortcut icon" href="favicon.ico">
+    <script>
+        if (window.top !== window.self) {
+            window.top.location = window.location
+        }
+        ;
+    </script>
+</head>
+
+<body class="signin">
+<div class="header">
+    <div class="logo" title="企业版" style="background-image:url(/img/logo1.png)">LOGO</div>
+    <div class="links_wrap">
+        <div class="links_item inline_block links_item_first">
+            <a href="javascript:void(0);" target="_blank" _cat="topcustomlink" _id="osfromqiyoubyGJ" style="">官网</a>
+        </div>
+        <div class="links_item inline_block ">
+            <a href="javascript:void(0);" target="_blank" _cat="topcustomlink" _id="gyfromqiyoubyGJ" style="">文档</a>
+        </div>
+        <span class="links_item inline_block ">
+            <a href="javascript:void(0);" target="_blank" _cat="toplink" _id="app">手机APP</a>
+            <span class="login_banner_download" style="background-image: url(/img/loginQr.png)"></span>
+        </span>
+        <span class="links_item inline_block "><a href="javascript:void(0);" target="_blank" _cat="toplink" _id="help">帮助</a></span>
+    </div>
+</div>
+
+<div class="content bg_default" style="background-color: rgb(34, 35, 36); background-image: url(/img/login-wel.jpg)">
+    <div class="content_inner">
+        <div class="login_welcome" style="background-image: url(/img/login-11wel.jpg)); display: block;"></div>
+        <div class="login_pannel">
+            <div class="login_panel_form">
+                <form id="signupForm">
+                <div class="register_box" style="display: block;">
+                    <div class="lg-content">
+                        <div class="qc-pt-login-content" id="loginBox">
+                            <div class="qc-pt-login-content J-commonLoginContent ">
+                                <div class="login-tab">
+                                    <div class="register_header">
+                                        <span class="loginTypeHtml">账号登录</span>
+                                        <img class="register_sjdl loginTypeImg" src="/img/loginTel.png" style="display: none;">
+                                        <img class="register_wxdl loginTypeImg" src="/img/loginQr.png" style="display: block;">
+                                    </div>
+                                    <div class="login-box J-loginContentBox J-qcloginBox" style="">
+                                        <div class="login-form">
+                                            <ul class="form-list">
+                                                <li>
+                                                    <div class="form-input">
+                                                        <div class="form-unit tip-unit">
+                                                            <label class="input-tips" style="display: none;">账号</label>
+                                                            <input value="" type="text" name="username" class="qc-log-input-text lg J-username" value="admin"  placeholder="账号" />
+                                                            <ul class="tip-list J-mailSuggest" style="display: none;"></ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-input">
+                                                        <div class="form-unit">
+                                                            <label class="input-tips" style="display: none;">密码</label>
+                                                            <input type="password" name="password" class="qc-log-input-text lg J-password" placeholder="密码"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="lg-tips-word error" style="display: none">
+                                            <div class="lg-tips-word-inner J-loginTip"></div>
+                                        </div>
+                                        <div class="op-btn">
+                                            <input type="submit" value="登 录" class="qc-log-btn J-loginBtn" hotrep="login.btn.doLogin" />
+                                        </div>
+                                    </div>
+                                    <div class="outside-login-aside">
+                                        <a href="#" class="outside-login-aside-link J-link">忘记账号</a>
+                                        <a href="#" class="outside-login-aside-link J-link">忘记密码</a>
+                                    </div>
+                                    <div class="lg-back-mod J-backToMailMod" style="display: none;">
+                                        <a href="javascript:;" class="J-btnSwitchLoginType" data-type="email">切换其他登录方式</a>
+                                    </div>
+                                    <div class="login-reg-mod J-registerArea">
+                                        <div class="login-reg-txt"> 还没有注册账号？</div>
+                                        <div class="login-reg-btn">
+                                            <a href="#" class="qc-event-btn J-link" hotrep="login.register">立即注册</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="copyright_wrap">
+        <span class="login_about_label"><a class="copyright_about_link" target="_blank" href="javascript:void(0);" _cat="bottomlink" _id="about">关于我们</a></span>
+        <span class="login_about_label"><a class="copyright_about_link" target="_blank" href="javascript:void(0);" _cat="bottomlink" _id="law">法律声明</a></span>
+        <span class="login_about_label"><a class="copyright_about_link" target="_blank" href="javascript:void(0);" _cat="bottomlink" _id="links">友情链接</a></span>
+    </div>
+    <div class="copyright_wrap copyright_wrap_info">
+        &copy; 2018 All Rights Reserved.
+    </div>
+</div>
+<script th:inline="javascript"> var ctx = [[@{
+    /}]]; </script>
+<!-- 全局js -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<!-- 验证插件 -->
+<script src="/ajax/libs/validate/jquery.validate.min.js"></script>
+<script src="/ajax/libs/validate/messages_zh.min.js"></script>
+<script src="/ajax/libs/layer/layer.min.js"></script>
+<script src="http://tajs.qq.com/stats?sId=62048022"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        console.log(ctx);
+        validateRule();
+    });
+
+    $.validator.setDefaults({
+        submitHandler: function () {
+            login();
+        }
+    });
+
+    function login() {
+        $.ajax({
+            type: "POST",
+            url: ctx + "login",
+            data: $('#signupForm').serialize(),
+            success: function (r) {
+                if (r.code == 0) {
+                    parent.location.href = '/index';
+                } else {
+                    layer.msg(r.msg);
+                }
+            }
+        });
+    }
+
+    function validateRule() {
+        var icon = "<i class='fa fa-times-circle'></i> ";
+        $("#signupForm").validate({
+            rules: {
+                username: {
+                    required: true
+                },
+                password: {
+                    required: true
+                }
+            },
+            messages: {
+                username: {
+                    required: icon + "请输入您的用户名",
+                },
+                password: {
+                    required: icon + "请输入您的密码",
+                }
+            }
+        })
+    }
+</script>
+</body>
+</html>

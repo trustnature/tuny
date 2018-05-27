@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh_CN" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="/tuny/css/fpgl/common.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+<div id="content" class="clearfix" style="width: 940px">
+    <div id="cms_r">
+        <div class="cms_r_main">
+            <div class="chayan_div">
+                <div id="print_area" class="printdiv">
+                    <table  border="1" class="comm_table2" width="100%" >
+                        <tr>
+                            <td colspan="4" style="background-color:#015293;color:#fff; line-height:40px;">
+                                <span id="cycs" th:text="'查验次数：第' + (${fpzb.cycs}?: _) + '次'">查验次数：第1次</span>
+                                <span style="padding-left:50px;" id="cysj">查验时间：2015-07-08 09:37:22</span>
+                                <span style="float:right">
+                                    <button id="printfp" class="white_button" style="position:relative!important;z-index:100" onmousemove="this.className='green_button';" onmouseout="this.className='white_button';">打印</button>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                    <div id='bg_div'></div>
+                    <div id="tabPage2">
+                        <div id="tabPage-jdcfp">
+                            <h1 id="fpcc_jdcfp" style="color:#015293;padding:5px 0px 5px 0px; text-align:center; position:relative"><strong>机动车销售统一发票</strong></h1>
+                            <table border="0" cellpadding="0" cellspacing="0"
+                                   style="width: 100%">
+                                <tr height="30">
+                                    <td class="align_left">发票代码：
+                                        <span class="content_td_blue" id="fpdm_jdcfp"  th:text="${fpzb.fpdm}?: _"></span>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td class="align_left">发票号码：
+                                        <span class="content_td_blue" id="fphm_jdcfp"  th:text="${fpzb.fphm}?: _"></span>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td class="align_left">开票日期：
+                                        <span class="content_td_blue" id="kprq_jdcfp"  th:text="${fpzb.kprq}?: _"> </span>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td class="align_left">&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </table>
+                            <table style="width: 100%" border="0" cellspacing="0"
+                                   cellpadding="0" class="fppy_table">
+                                <tr>
+                                    <td class="align_center">
+                                        <p style="width: 99px;">机 打 代 码</p>
+                                        <p>机 打 号 码</p>
+                                        <p>机 器 编 号</p>
+                                    </td>
+                                    <td colspan="3" nowrap class="align_left">
+                                        <p class="content_td_blue" id="jddm_jdcfp" th:text="${fpzb.fpdm}?: _"></p>
+                                        <p class="content_td_blue" id="jdhm_jdcfp" th:text="${fpzb.fphm}?: _"></p>
+                                        <p class="content_td_blue" id="jqbm_jdcfp" th:text="${fpzb.jqbm}?: _"></p>
+                                    </td>
+                                    <td class="align_center">
+                                        <p>税</p>
+                                        <p>控</p>
+                                        <p>码</p>
+                                    </td>
+                                    <td colspan="6" class="align_center" id="skm_jdcfp">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">
+                                        <p>购买方名称及</p>
+                                        <p>身份证号码/</p>
+                                        <p>组织机构代码</p></td>
+                                    <td colspan="4" nowrap class="align_left">
+                                        <p class="content_td_blue" id="ghdw_jdcfp" th:text="${fpzb.gfmc}?: _" ></p>
+                                        <p class="content_td_blue" id="sfzhm_jdcfp" th:text="${fpzb.gfsh}?: _"></p>
+                                    </td>
+                                    <td class="align_center">纳税人识别号</td>
+                                    <td colspan="4" class="align_left">
+                                        <p class="content_td_blue" id="gfsbh_jdcfp" th:text="${fpzb.gfsh}?: _"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center"><p>车 辆 类 型</p></td>
+                                    <td colspan="2" nowrap class="align_left">
+                                        <span class="content_td_blue" id="cllx_jdcfp"  th:text="${fpzb.cllx}?: _"></span></td>
+                                    <td nowrap class="align_center">厂牌型号</td>
+                                    <td colspan="3" class="align_left">
+                                        <p class="content_td_blue" id="cpxh_jdcfp"  th:text="${fpzb.cpxh}?: _"></p></td>
+                                    <td class="align_center">产地</td>
+                                    <td colspan="2" class="align_left">
+                                        <p class="content_td_blue" id="cd_jdcfp" th:text="${fpzb.cd}?: _"></p></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">合 格 证 号</td>
+                                    <td colspan="2" nowrap class="align_left">
+                                        <span class="content_td_blue" id="hgzs_jdcfp" th:text="${fpzb.hgzh}?: _"></span></td>
+                                    <td colspan="2" nowrap class="align_center">进口证明书号</td>
+                                    <td colspan="2" class="align_left">
+                                        <span class="content_td_blue" id="jkzmsh_jdcfp" th:text="${fpzb.jkzmsh}?: _"></span></td>
+                                    <td class="align_center">商检单号</td>
+                                    <td colspan="2" class="align_left content_td_blue"
+                                        id="sjdh_jdcfp" th:text="${fpzb.sjdh}?: _">&nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">发动机号码</td>
+                                    <td colspan="4" nowrap class="align_left content_td_blue"
+                                        id="fdjhm_jdcfp" th:text="${fpzb.fdjhm}?: _">&nbsp;
+                                    </td>
+                                    <td nowrap class="align_center">车辆识别代号/车架号码</td>
+                                    <td colspan="4" nowrap class="align_left content_td_blue"
+                                        id="cjhm_jdcfp" th:text="${fpzb.clsbdh}?: _">&nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">价 税 合 计</td>
+                                    <td colspan="5" nowrap class="borderLeft align_left"><span
+                                            class="content_td_blue align_left" id="jshjdx_jdcfp"></span></td>
+                                    <td colspan="4" nowrap class="borderRight align_right">
+                                        <span style="padding: 0 20px;">小写</span>
+                                        <span class="content_td_blue align_right" id="jshjxx_jdcfp" th:text="'¥' + ${fpzb.jshj}?: _"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">销货单位名称</td>
+                                    <td colspan="4" nowrap class="align_left content_td_blue"
+                                        id="xhdwmc_jdcfp" th:text="${fpzb.xfmc}?: _">&nbsp;
+                                    </td>
+                                    <td class="align_center">电话</td>
+                                    <td colspan="4" class="align_left content_td_blue"
+                                        id="dh_jdcfp" th:text="${fpzb.dh}?: _">&nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">纳税人识别号</td>
+                                    <td colspan="4" nowrap class="align_left content_td_blue"
+                                        id="nsrsbh_jdcfp" th:text="${fpzb.gfsh}?: _">&nbsp;
+                                    </td>
+                                    <td class="align_center">账号</td>
+                                    <td colspan="4" class="align_left content_td_blue"
+                                        id="zh_jdcfp" th:text="${fpzb.zh}?: _">&nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">地 址</td>
+                                    <td colspan="3" class="align_left"><p
+                                            class="content_td_blue" id="dz_jdcfp" th:text="${fpzb.dz}?: _"></p></td>
+                                    <td nowrap class="align_center">开户银行</td>
+                                    <td colspan="5" class="align_left">
+                                        <p class="content_td_blue" id="khyh_jdcfp" th:text="${fpzb.khyh}?: _"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">
+                                        <p>增值税税率</p>
+                                        <p>或 征 收 率</p>
+                                    </td>
+                                    <td nowrap width="20%">
+                                        <p class="content_td_blue align_center" id="zzssl_jdcfp" th:text="${fpzb.slv}?: _"></p></td>
+                                    <td nowrap class="align_center">
+                                        <p>增值税</p>
+                                        <p>税额</p></td>
+                                    <td nowrap class="align_center">
+                                        <p class="content_td_blue" id="zzsse_jdcfp"  th:text="'¥' + ${fpzb.se}?: _"></p>
+                                    </td>
+                                    <td class="align_center">
+                                        <p>主管税务</p>
+                                        <p>机关及代码</p></td>
+                                    <td colspan="5" class="align_left">
+                                        <p class="content_td_blue" id="swjg_dm_jdcfp" th:text="${fpzb.zgswjg} + ${fpzb.zgswjgdm}"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center" width="10%">不 含 税 价</td>
+                                    <td colspan="2" nowrap class="align_left" width="20%">小写
+                                        <span class="content_td_blue" id="cjfy_jdcfp"  th:text="'¥' + ${fpzb.je}?: _"></span>
+                                    </td>
+                                    <td nowrap class="align_center" width="15%">完税凭证号码</td>
+                                    <td colspan="2" class="align_center" width="24%">
+                                        <p class="content_td_blue" id="wspzhm_jdcfp"  th:text="${fpzb.wspzhm}?: _"></p>
+                                    </td>
+                                    <td class="align_center" width="5%">吨位</td>
+                                    <td class="align_center" width="8%">
+                                        <p class="content_td_blue" id="dw_jdcfp" th:text="${fpzb.dw}?: _"></p>
+                                    </td>
+                                    <td class="align_center" width="10%">限乘人数</td>
+                                    <td class="align_center" width="8%">
+                                        <p class="content_td_blue" id="xcrs_jdcfp" th:text="${fpzb.xcrs}?: _"></p>
+                                    </td>
+                                </tr>
+                                <!--表头-->
+                                <!--表头结束-->
+                            </table>
+
+                        </div>
+
+                    </div>
+                    <!--原始信息  end-->
+                </div>
+                <div style="padding: 0px 35px 0px 0px; color: #da534f; font-size: 14px; line-height: 25px;">
+                    <strong>特别提示：</strong> <br/>&raquo;&nbsp;&nbsp;本平台仅提供所查询发票票面信息的查验结果。
+                    <br/>&raquo;&nbsp;&nbsp;若发现发票查验结果与实际交易不符，任何单位或个人有权拒收并向当地税务机关举报。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/tuny/js/fpgl/fpcx/result.js"></script>
+<script type="text/javascript" src="/js/jquery.PrintArea.js"></script>
+
+<script type="text/javascript" th:inline="javascript">
+    $('#jshjdx_jdcfp').html("⊗" + NoToChinese([[${fpzb.je}]], '03'));
+</script>
+</body>
+</html>
