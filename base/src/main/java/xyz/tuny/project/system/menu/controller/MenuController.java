@@ -146,4 +146,19 @@ public class MenuController extends BaseController
         List<Map<String, Object>> tree = menuService.selectMenuTree(role);
         return tree;
     }
+
+    /**
+     * 校验菜单名称
+     */
+    @PostMapping("/checkMenuNameUnique")
+    @ResponseBody
+    public String checkMenuNameUnique(Menu menu)
+    {
+        String uniqueFlag = "0";
+        if (menu != null)
+        {
+            uniqueFlag = menuService.checkMenuNameUnique(menu);
+        }
+        return uniqueFlag;
+    }
 }

@@ -79,4 +79,12 @@ public interface IMenuService
      */
     public boolean saveMenu(Menu menu);
 
+    /**
+     * 校验菜单名称是否唯一
+     *
+     * @param menu 菜单信息
+     * @return 结果
+     */
+    public String checkMenuNameUnique(Menu menu);
+
 }

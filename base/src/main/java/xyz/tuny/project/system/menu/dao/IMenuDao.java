@@ -80,4 +80,5 @@ public interface IMenuDao extends BaseDao<Menu, Long>
     public Menu selectMenuById(Long menuId);
 
 
+    public Menu findMenusByMenuName(String menuName);
 }

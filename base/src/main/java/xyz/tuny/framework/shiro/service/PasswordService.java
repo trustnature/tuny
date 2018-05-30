@@ -2,6 +2,8 @@ package xyz.tuny.framework.shiro.service;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import javax.annotation.PostConstruct;
+
+import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -87,6 +89,9 @@ public class PasswordService
 
     public String encryptPassword(String username, String password, String salt)
     {
+        if(StringUtils.isBlank(salt)){
+            return Md5Utils.hash(username + password);
+        }
         return Md5Utils.hash(username + password + salt);
     }
 

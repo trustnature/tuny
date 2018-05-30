@@ -12,6 +12,7 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import xyz.tuny.common.constant.UserConstants;
 import xyz.tuny.common.utils.StringUtils;
 import xyz.tuny.common.utils.TreeUtils;
 import xyz.tuny.common.utils.security.ShiroUtils;
@@ -203,6 +204,29 @@ public class MenuServiceImpl implements IMenuService
             menuDao.save(menu);
         }
         return true;
+    }
+
+    /**
+     * 校验菜单名称是否唯一
+     *
+     * @param menu 菜单信息
+     * @return 结果
+     */
+    @Override
+    public String checkMenuNameUnique(Menu menu)
+    {
+        if (menu.getMenuId() == null)
+        {
+            menu.setMenuId(-1L);
+        }
+        Long menuId = menu.getMenuId();
+        Menu info = menuDao.findMenusByMenuName(menu.getMenuName());
+        if (StringUtils.isNotNull(info) && StringUtils.isNotNull(info.getMenuId())
+                && info.getMenuId().longValue() != menuId.longValue())
+        {
+            return UserConstants.MENU_NAME_NOT_UNIQUE;
+        }
+        return UserConstants.MENU_NAME_UNIQUE;
     }
 
 }

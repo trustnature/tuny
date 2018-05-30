@@ -198,11 +198,9 @@ public class RoleServiceImpl implements IRoleService
             // 修改角色信息
             roleDao.save(role);
             // 删除角色与菜单关联
-            roleMenuDao.delete(roleId);
+            roleMenuDao.delRoleMenus(roleId);
 
-        }
-        else
-        {
+        } else {
             role.setCreateBy(ShiroUtils.getLoginName());
             // 新增角色信息
             roleDao.save(role);

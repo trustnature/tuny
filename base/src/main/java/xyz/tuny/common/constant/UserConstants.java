@@ -36,4 +36,8 @@ public class UserConstants
     public static final int PASSWORD_MIN_LENGTH = 5;
     public static final int PASSWORD_MAX_LENGTH = 20;
 
+    /** 菜单名称是否唯一的返回结果码 */
+    public final static String MENU_NAME_UNIQUE = "0";
+    public final static String MENU_NAME_NOT_UNIQUE = "1";
+
 }
