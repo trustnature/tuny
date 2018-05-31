@@ -6,7 +6,7 @@
 <body class="gray-bg">
 <div class="wrapper wrapper-content">
     <div class="btn-group hidden-xs" id="tableToolbar" role="group">
-        <button type="button" class="btn btn-outline btn-default" th:onclick="'javascript:add()'" shiro:hasPermission="sjcj:sxqy:import">
+        <button type="button" class="btn btn-outline btn-default" th:onclick="'javascript:add()'" shiro:hasPermission="sjcj:sxqy:add">
             <i class="glyphicon glyphicon-plus"></i>
         </button>
         <button type="button" class="btn btn-outline btn-default" th:onclick="'javascript:batchRemove()'" shiro:hasPermission="sjcj:sxqy:batchRemove">
@@ -19,6 +19,6 @@
     </table>
 </div>
 <div th:include="include :: footer"></div>
-<script type="text/javascript" src="/tuny/js/fpgl/fpcx/fpcx.js"></script>
+<script type="text/javascript" src="/tuny/js/sjcj/sxqy/sxqy.js"></script>
 </body>
 </html>

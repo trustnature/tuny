@@ -12,8 +12,11 @@ import xyz.tuny.fpcy.fpcx.domain.Fpmx;
 import xyz.tuny.fpcy.fpcx.domain.Fpzb;
 import xyz.tuny.fpcy.fpcx.service.IFpmxService;
 import xyz.tuny.fpcy.fpcx.service.IFpzbService;
+import xyz.tuny.framework.aspectj.lang.annotation.Log;
 import xyz.tuny.framework.web.controller.BaseController;
 import xyz.tuny.framework.web.page.TableDataInfo;
+import xyz.tuny.project.system.post.domain.Post;
+import xyz.tuny.project.system.role.domain.Role;
 
 import java.util.List;
 
@@ -59,6 +62,17 @@ public class SxqyController extends BaseController
         model.addAttribute("fpmxs", fpmxs);
         String fplx = fpzb.getFplx();
         return prefix + "/cyjg" + fplx;
+    }
+
+    /**
+     * 新增用户
+     */
+    @RequiresPermissions("sjcj:sxqy:add")
+    @Log(title = "数据采集", action = "失信企业-新增企业")
+    @GetMapping("/add")
+    public String add(Model model)
+    {
+        return prefix + "/add";
     }
 
 }

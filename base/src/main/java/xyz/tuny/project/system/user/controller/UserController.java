@@ -194,6 +194,6 @@ public class UserController extends BaseController implements ApplicationContext
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("====");
+        //System.out.println("====");
     }
 }

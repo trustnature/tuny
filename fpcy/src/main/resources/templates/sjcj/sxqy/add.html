@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<link href="/ajax/libs/iCheck/custom.css" rel="stylesheet">
+<link href="/ajax/libs/select/select2.css" rel="stylesheet">
+<link href="/css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+<link href="/tuny/css/tuny.css?v=1.0.8" rel="stylesheet"/>
+<body class="white-bg">
+	<div class="wrapper wrapper-content animated fadeInRight ibox-content">
+		<form class="form-horizontal m" id="form-user-add">
+			<input name="deptId"  type="hidden" id="deptId"/>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">状态：</label>
+				<div class="col-sm-8">
+					<div class="onoffswitch">
+                         <input type="checkbox" th:checked="true" class="onoffswitch-checkbox" id="status" name="status">
+                         <label class="onoffswitch-label" for="status">
+                             <span class="onoffswitch-inner"></span>
+                             <span class="onoffswitch-switch"></span>
+                         </label>
+                     </div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">岗位：</label>
+				<div class="col-sm-8">
+					<select id="post" name="post" class="form-control select2-hidden-accessible" multiple="">
+						<option th:each="post:${posts}" th:value="${post.postId}" th:text="${post.postName}"></option>
+					</select>
+					
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">选择文件：</label>
+				<div class="col-sm-8">
+				<div class="fileinput fileinput-new input-group" data-provides="fileinput">
+					<div class="form-control" data-trigger="fileinput"><i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>
+					<span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">选择文件</span><span class="fileinput-exists">更改</span><input type="file" name="..."></span>
+					<a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">清除</a>
+				</div>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="form-control-static col-sm-offset-9">
+					<button type="submit" class="btn btn-primary">提交</button>
+					<button th:onclick="'javascript:layer_close()'" class="btn btn-danger" type="button">关闭</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div th:include="include::footer"></div>
+	<script type="text/javascript" src="/tuny/js/system/user/add.js">
+	</script>
+	<script src="/ajax/libs/iCheck/icheck.min.js"></script>
+	<script src="/ajax/libs/select/select2.js"></script>
+	<script src="/js/plugins/jasny/jasny-bootstrap.min.js"></script>
+	<script>
+        $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
+    </script>
+</body>
+</html>
