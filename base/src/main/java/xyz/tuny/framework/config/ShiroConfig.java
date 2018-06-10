@@ -252,14 +252,13 @@ public class ShiroConfig
 
     /**
      * 开启Shiro代理
-     */
     @Bean
     public DefaultAdvisorAutoProxyCreator defaultAdvisorAutoProxyCreator()
     {
         DefaultAdvisorAutoProxyCreator proxyCreator = new DefaultAdvisorAutoProxyCreator();
         proxyCreator.setProxyTargetClass(true);
         return proxyCreator;
-    }
+    }*/
 
     /**
      * thymeleaf模板引擎和shiro框架的整合

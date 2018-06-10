@@ -13,7 +13,6 @@ import org.springframework.context.annotation.ImportResource;
  * @author tuny
  */
 @SpringBootApplication
-@ImportResource(locations={"classpath:applicationContext.xml"})
 @EnableAutoConfiguration(exclude = { DataSourceAutoConfiguration.class })
 public class TunyApplication
 {
